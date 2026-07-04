@@ -1,4 +1,4 @@
-import amazon_page_analyser as apa
+from . import amazon_page_analyser as apa
 
 import random
 import time
