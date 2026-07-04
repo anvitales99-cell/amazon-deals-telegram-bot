@@ -27,10 +27,4 @@ jobs:
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
           AMAZON_TAG: ${{ secrets.AMAZON_TAG }}
         run: |
-          if [ -f main.py ]; then
-            python main.py
-          elif [ -f bot.py ]; then
-            python bot.py
-          else
-            python script.py
-          fi
+          python src/amazon_deals_telegram_bot.py
