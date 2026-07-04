@@ -140,7 +140,7 @@ def encode_amazon_deals_page(
 
 
 def get_all_deals_ids():
-    deals_page = "https://www.amazon.it/deals/"
+    deals_page = "https://www.amazon.in/deals/"
     selenium_driver = start_selenium()
 
     print("Starting taking all urls")
@@ -219,7 +219,7 @@ def extract_product_id(url):
 
 
 def url_from_id(product_id):
-    return "https://www.amazon.it/dp/" + product_id
+    return "https://www.amazon.in/dp/" + product_id
 
 
 def get_product_info(product_id, remove_ebooks=False):
