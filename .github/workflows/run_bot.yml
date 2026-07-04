@@ -27,4 +27,4 @@ jobs:
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
           AMAZON_TAG: ${{ secrets.AMAZON_TAG }}
         run: |
-          python src/amazon_deals_telegram_bot.py
+          python -m amazon-deals-telegram-bot
