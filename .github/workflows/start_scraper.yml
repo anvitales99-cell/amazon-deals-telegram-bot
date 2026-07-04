@@ -2,8 +2,8 @@ name: Run Indian Amazon Bot
 
 on:
   schedule:
-    - cron: '0 * * * *'
-  workflow_dispatch:
+    - cron: '0 * * * *' # Triggers the bot automatically at the start of every single hour
+  workflow_dispatch: # Allows you to also trigger the bot manually anytime
 
 jobs:
   run-bot:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Script
         env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-          AMAZON_TAG: ${{ secrets.AMAZON_TAG }}
+          AMAZON_DEALS_TG_BOT_TOKEN: ${{ secrets.AMAZON_DEALS_TG_BOT_TOKEN }}
+          AMAZON_DEALS_TG_CHANNEL_ID: ${{ secrets.AMAZON_DEALS_TG_CHANNEL_ID }}
+          AMAZON_DEALS_PARTNER_TAG: ${{ secrets.AMAZON_DEALS_PARTNER_TAG }}
         run: python -m amazon-deals-telegram-bot
